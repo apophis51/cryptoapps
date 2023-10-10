@@ -17,7 +17,7 @@ const config = createConfig({
 function Profile() {
     const { address, isConnected } = useAccount()
     const { connect } = useConnect({
-      connector: new InjectedConnector(),
+      connector: new InjectedConnector(), // Metamask is an injected wallet
     })
     const { disconnect } = useDisconnect()
    
