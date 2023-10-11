@@ -24,6 +24,7 @@ function WalletComponent() {
   async function connectWallet() {
     try {
       if (provider) {
+        await provider.send("eth_requestAccounts", []);
         const signer = provider.getSigner();
         const connectedWallet = await signer.getAddress();
         setWallet(connectedWallet);
