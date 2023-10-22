@@ -1,7 +1,3 @@
-// replace the name of the contract with which one you want to deploy!
-//npx hardhat run scripts/deployGame1.js --network goerli   
-//Game1 deployed to address: 0x992bcC5e92F94849edC86c9A1c321ce966c24200
-
 
 
 const contractName = "Gambling";
