@@ -5,7 +5,7 @@ require("dotenv").config();
 
 module.exports = {
   solidity: "0.8.4",
-  defaultNetwork: "hardhat", //or defaultNetwork: "localhost",
+  defaultNetwork: "goerli", //or defaultNetwork: "localhost",
   networks: {
     hardhat: {}, //this line is only needed if launching on local networks 
     goerli: {
@@ -14,6 +14,14 @@ module.exports = {
     },
     optimism: {
       url: process.env.OPTIMISM_URL,
+      accounts: [process.env.PRIVATE_KEY]
+    },
+    polygonMumbai: {
+      url: process.env.POLYGON_MUMBAI_URL,
+      accounts: [process.env.PRIVATE_KEY]
+    },
+    optimismGoerli: {
+      url: process.env.OPTIMISM_GOERLI_URL,
       accounts: [process.env.PRIVATE_KEY]
     },
     metamask: {
