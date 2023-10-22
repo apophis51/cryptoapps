@@ -5,7 +5,7 @@ require("dotenv").config();
 
 module.exports = {
   solidity: "0.8.4",
-  defaultNetwork: "metamask", //or defaultNetwork: "localhost",
+  defaultNetwork: "hardhat", //or defaultNetwork: "localhost",
   networks: {
     hardhat: {}, //this line is only needed if launching on local networks 
     goerli: {
