@@ -13,12 +13,12 @@ require('dotenv').config();
 
 async function main() {
 
-  const url = process.env.GOERLI_URL;
+//   const url = process.env.GOERLI_URL;
 
   let artifacts = await hre.artifacts.readArtifact("Gambling3");
 
 // const url = 'http://localhost:8545'
-  // const url = process.env.OPTIMISM_URL; //optimism
+  const url = process.env.OPTIMISM_URL; //optimism
   // const url = process.env.GOERLI_URL; //goerli
   // const url = process.env.POLYGON_MUMBAI_URL; //polygon mumbai
   const provider = new ethers.providers.JsonRpcProvider(url);

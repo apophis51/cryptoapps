@@ -626,24 +626,28 @@ export default function WalletComponent(props) {
         const game = await new ethers.Contract(gameAddr, abi, provider.getSigner());
         let userNumber = await game.placeBet(number)
 
-        let contractOwnerKey = props.ownerkey
-        console.log(contractOwnerKey)
-        let ownerWallet = new ethers.Wallet(contractOwnerKey, provider);
-        const ownerInstance = await new ethers.Contract(gameAddr, abi, ownerWallet);
+        // let contractOwnerKey = props.propFunction
+        // console.log(contractOwnerKey)
+        // let ownerWallet = new ethers.Wallet(contractOwnerKey, provider);
+        // const ownerInstance = await new ethers.Contract(gameAddr, abi, ownerWallet);
        
   
-        // Call the contract function (playGame)
-        const tx = await ownerInstance.playGame(8, wallet);
-        setResult('Mining Transaction...')
-        const receipt = await tx.wait();
-        console.log('Game played:', tx.hash);
-        const games = receipt.events[0].args.gamesPlayed._hex
-        console.log(parseInt(games, 16));
-        let gameResult = await game.result()
-        console.log("the game result is", gameResult.toString())
+        // const tx = await ownerInstance.playGame(8, wallet);
+        // setResult('Mining Transaction...')
+        // const receipt = await tx.wait();
+        // console.log('Game played:', tx.hash);
+        // const games = receipt.events[0].args.gamesPlayed._hex
+        // console.log(parseInt(games, 16));
+        // let gameResult = await game.result()
+        // console.log("the game result is", gameResult.toString())
 
         const contractBalance = await provider.getBalance(game.address);
         const contractBalanceInEther = ethers.utils.formatEther(contractBalance);
+
+        setResult('Mining Transaction...')
+
+        let gameResult = await props.propFunction(wallet)
+        console.log(gameResult)
 
         if (gameResult == true) {
           setResult("you won, you will be paid" + contractBalanceInEther + "eth" + "Your wallet balance will be updated once the transaction is mined, this should take less than a minute")

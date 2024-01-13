@@ -1,4 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a repository is a Firing Range created test out Solidity Blockchain Technologies and ideas. It is not meant to be a full-fledged project, but rather a place to test out new ideas and technologies. 
+
+Some of the Insights Gained from here will be used on our live deployment at [https://malcmind.com](https://github.com/apophis51/next-js-Portfolio)
+
+
+
+## Last Updates: 
+
+- Note to self: some of these updates where from a while ago, and I am not sure if they are still relevant. I will need to go through and clean up this file.
+
+### Updates:
+
+- We added experimental server actions to our NextConfig File (which is no longer needed If we upgrade this Nextjs Project. The current versions stabalized serer actions)
+
+- it looks like `app/MetaMask2` and `app/MetaMask` are no longer needed. I will need to go through and clean up this file. It looks like this was previous attempts to develop this code before I deployed it to the live site. On the live site the files are `CryptoPredictions.js` and `GuessTheNumberGame.js`
+
+- it looks like `Gambling3.sol` might be the source of my live abi smart contract file
+
+- it looks like `deployGamblingOptimism3.js` created my ABI file
+
+-it looks like `/home/apophis51/cryptoapps/contracts/Gambling3.sol` is our current good ABI file due to a code line match with my deployed code
+
 
 ## Getting Started
 

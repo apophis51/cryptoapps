@@ -4,8 +4,8 @@ import "hardhat/console.sol";
 
 
 contract Gambling3 {
-address public gameOwner;
-address public houseWallet;
+address public gameOwner; // house
+address public houseWallet; //house 
 uint256 public transfer;
 uint256 public _gameCredits;
 uint public balance = address(this).balance;
@@ -15,7 +15,7 @@ bool public result;
 
   constructor(address _houseWallet) {
         gameOwner = msg.sender;
-        initialized = false;
+        initialized = false;  // 
         houseWallet = _houseWallet;
   }
 
@@ -57,6 +57,7 @@ function initializeValue() public {
 function getBalance() public{
     emit GetBalance(transfer);
 }
+
 
  function playGame(uint randomNumber, address player1) public payable{
    console.log('game credits', gameCredits[player1]);
